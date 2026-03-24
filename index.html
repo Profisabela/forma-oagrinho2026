@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estufa Sustentável - Agrinho 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🍓 AgroSustentável</div>
+        <nav>
+            <button onclick="mudarPagina('simulador')" class="nav-btn ativo" id="btn-simulador">Simulador</button>
+            <button onclick="mudarPagina('sobre-agrinho')" class="nav-btn" id="btn-sobre-agrinho">Concurso Agrinho</button>
+            <button onclick="mudarPagina('sobre-mim')" class="nav-btn" id="btn-sobre-mim">Sobre Mim</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="simulador" class="pagina ativa">
+            <h1>Simulador de Estufa de Morango</h1>
+            <p>Ajuste as condições da estufa para encontrar o equilíbrio perfeito entre a produção e o meio ambiente.</p>
+            
+            <div class="painel-simulador">
+                <div class="controles">
+                    <div class="controle-item">
+                        <label for="temp">Temperatura da Estufa: <span id="temp-val">20</span>°C</label>
+                        <input type="range" id="temp" min="0" max="50" value="20" oninput="atualizarSimulador()">
+                    </div>
+
+                    <div class="controle-item">
+                        <label for="umid-ar">Umidade do Ar: <span id="umid-ar-val">70</span>%</label>
+                        <input type="range" id="umid-ar" min="0" max="100" value="70" oninput="atualizarSimulador()">
+                    </div>
+
+                    <div class="controle-item">
+                        <label for="umid-solo">Umidade do Solo: <span id="umid-solo-val">65</span>%</label>
+                        <input type="range" id="umid-solo" min="0" max="100" value="65" oninput="atualizarSimulador()">
+                    </div>
+                </div>
+
+                <div class="resultado">
+                    <h2>Status da Planta</h2>
+                    <div id="emoji-planta" class="emoji">🍓🌱</div>
+                    <p id="mensagem-status">Condições perfeitas! O morangueiro está crescendo saudável e com baixo impacto ambiental.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-agrinho" class="pagina">
+            <h1>Concurso Agrinho 2026</h1>
+            <h2>Tema: Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h2>
+            <p>O Programa Agrinho é a maior iniciativa de responsabilidade social do Sistema FAEP/SENAR-PR. O tema deste ano nos convida a pensar em como podemos produzir alimentos de qualidade sem esgotar os recursos do nosso planeta.</p>
+            
+            <div class="imagem-placeholder">
+                <img src="sua-imagem.jpg" alt="Logo ou Imagem do Concurso Agrinho" id="img-agrinho">
+                <p><em>(Coloque a imagem do concurso na mesma pasta dos arquivos e atualize o nome no código HTML)</em></p>
+            </div>
+        </section>
+
+        <section id="sobre-mim" class="pagina">
+            <h1>Sobre Mim</h1>
+            <div class="perfil">
+                <h2>Olá! Eu sou [Seu Nome Aqui]</h2>
+                <p>Sou aluno(a) do 1º ano do Ensino Médio no [Nome da sua Escola].</p>
+                <p>Criei este projeto porque acredito que a tecnologia, como sensores e estufas inteligentes, é a chave para o futuro do agronegócio sustentável. Quando controlamos exatamente o que a planta precisa, evitamos o desperdício de água e o uso excessivo de defensivos agrícolas!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
