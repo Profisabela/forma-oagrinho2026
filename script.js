@@ -13,6 +13,11 @@ function mudarPagina(idPaginaAlvo) {
     document.getElementById('btn-' + idPaginaAlvo).classList.add('ativo');
 }
 
+// Inicializar o simulador quando a página carrega
+window.addEventListener('load', function() {
+    atualizarSimulador();
+});
+
 // 2. Função principal do Simulador
 function atualizarSimulador() {
     // Pegar os valores das barras deslizantes
